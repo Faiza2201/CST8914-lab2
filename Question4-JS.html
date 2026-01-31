@@ -5,17 +5,24 @@
     <title>Question 4 - JavaScript</title>
 
 </head>
-
+<style>
+    button:hover{
+        background-color: #e6f0ff;
+    }
+</style>
 <body>
     <h1>HTML DOM Events</h1>
-    <p>Trigger a function on hover that will output "Hello World":</p>
+    <p>Trigger a function on hover that will output "Hello tout le monde":</p>
 
-    <button onmouseover="myFunction()">Action!</button>
-    <p id="demo"></p>
-</body>
+    <button id="demo">Action here!</button>
+    <p id="msg"></p>
+    </body>
 <script>
+    document.getElementById("demo").addEventListener("click",function(){
+        myFunction();
+    });
     function myFunction() {
-        document.getElementById("demo").innerHTML = "Hello World";
+        document.getElementById("msg").innerHTML = "Hello tout le monde";
     }
 </script>
 
